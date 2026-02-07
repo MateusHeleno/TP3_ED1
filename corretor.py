@@ -40,7 +40,7 @@ class Corrector(object):
         return False
     
     def __run_test(self, test_case):
-        p = subprocess.Popen(f'./exe < {test_case} > output.out', shell=True)
+        p = subprocess.Popen(f'./exe {test_case} > output.out', shell=True)
         try:
             p.wait(self.__max_time)
         except subprocess.TimeoutExpired:

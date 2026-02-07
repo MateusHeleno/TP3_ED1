@@ -1,0 +1,4 @@
+begin
+var y = 100
+begin
+print y

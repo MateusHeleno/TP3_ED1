@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 #define TAM_PALA 16
 
@@ -29,22 +30,28 @@ typedef struct { // estrutura gerak da oukha
 
 
 // TAD PILHA
-
 Pilha *criarPilha();
 Pilha *destroiPilha(Pilha *p);
 void empilha(Pilha *p,Escopo *e);
 void desempilha(Pilha *p);
-void executar();
+void executar(Pilha *p,int argc, char **argv);
 
 // TAD ESCOPO
 Escopo *criarEscopo();
 Escopo *destroiEscopo(Escopo *e);
-void adicionaVar();
-// buscarvar();
+void adicionaVar(Pilha *p,char *var,char *valor);
+char *buscarVar(Pilha *p,char* varBusca);
+void imprimirVar(Pilha *p,char *varBusca);
+No* buscarAr(No* raiz, char* varBusca);
 
 // TAD NO 
-No *criaNo();
+bool adicionaNo(No **raiz,char *var,char *valor);
+No *criaNo(char *var,char *valor);
 void destroiAr(No *no);
+
+// aux
+FILE* abreArquivo(int argc, char *argv[]);
+int analiseArq(char *palavra);
 
 #endif
 
