@@ -1,3 +1,8 @@
+// Joao Felipe Paiva Paixao
+// 25.1.4014
+// Mateus Oliveira Heleno
+// 25.1.4007
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
