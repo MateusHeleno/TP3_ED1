@@ -5,13 +5,14 @@
 
 #include "filaprocessos.h"
 
-int main(int argc, char **argv){
+int main(int argc, char **argv)
+{
 
-    Pilha *p = criarPilha();
+    Pilha *p = criarPilha(); // cria a pilha de escopos
 
-    executar(p, argc, argv);
+    executar(p, argc, argv); // executa o interpretador passando os nomes de arquivos
 
-    destroiPilha(p);
+    destroiPilha(p); // limpa a memoria alocada
 
     return 0;
 }
